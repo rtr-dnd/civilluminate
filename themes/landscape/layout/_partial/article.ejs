@@ -1,0 +1,57 @@
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/paper-card/paper-card.html">
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    <%- partial('post/category') %>
+  </div>
+  <% if(index){ %>
+  <paper-card class="article-inner" elevation="0" image="/<%= post.path %><%= post.title %>.jpg">
+  <% }else if(post.tags==null){ %>
+  <paper-card class="article-inner" elevation="1">
+  <% }else{ %>
+  <paper-card class="article-inner" elevation="1" image="/<%= post.path %><%= post.title %>.jpg">
+  <% } %>
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header" style="display: flex; justify-content:space-between; align-items:center;">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+        <a href="/authors/<%= post.author %>">
+          <img src="/css/images/profiles/<%= post.author %>.jpg" alt="author" width="50" height="50" style="border-radius:400px;" >
+        </a>
+      </header>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody" style="clear:both;">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <a class="none" href="<%- url_for(post.path) %>#more">
+            <paper-button class="article-more-link-button"><%= theme.excerpt_link %></paper-button>
+          </a>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+    <% if (post.tags!=null) { %>
+    <footer class="article-footer">
+      <!--<a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">
+        <%= __('share') %>
+      </a>-->
+      <%- partial('post/tag') %>
+      <% if(!index && post.tags!=null) {%>
+        <div id="disqus_thread" style="margin-top:50px;">
+          <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        <% } %>
+    </footer>
+    <% }else{ %>
+      <footer class="article-footer-null">
+      </footer>
+    <% } %>
+  </paper-card>
+
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>

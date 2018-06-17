@@ -1,0 +1,24 @@
+<link rel="import" href="/bower_components/paper-card/paper-card.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/iron-collapse/iron-collapse.html">
+<div style="margin-top: 50px;">
+  <paper-card class="article-inner" elevation="3">
+    <header class="article-header" style="margin-bottom: 30px;">
+      <h1 itemprop="name" class="article-title">
+        記事を探す
+      </h1>
+    </header>
+    <script>
+      function maptoggle() {
+        document.getElementById("map-collapse").toggle();
+      }
+    </script>
+    <footer class="article-footer" style="font-size: 1.0em;">
+      <paper-button id="map-button" class="find-button multiple" onclick="maptoggle();">地図から</paper-button>
+      <a href="/about" class="none"><paper-button class="find-button multiple">執筆者から</paper-button></a>
+      <iron-collapse id="map-collapse">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1Fy_GyzOVxD146YD1-g7yw8FNQaVZ0pEv" width="100%" height="480" style="margin-top: 30px;"></iframe>
+      </iron-collapse>
+    </footer>
+  </paper-card>
+</div>
