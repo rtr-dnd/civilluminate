@@ -12,11 +12,18 @@ URLである「civilluminate」は、普段意識されない土木に光を当�
 ## 執筆者の紹介
 
 <img src="/css/images/profiles/accelelando.jpg" width="100" height="100" style="border-radius:400px;" >
-<center>あっちぇれ : accelelando (制作者)
+<center>あっちぇれ : accelelando (サイト制作者)
 
 愛知出身、東京在住の大学生です。
 デザインとかが好きです。
-<paper-button class="article-more-link-button multiple">Twitter</paper-button><paper-button class="article-more-link-button multiple">書いた記事</paper-button></center>
+<a href="https://twitter.com/accelelando" class="none"><paper-button class="article-more-link-button multiple">Twitter</paper-button></a><a href="/authors/accelelando" class="none"><paper-button class="article-more-link-button multiple">書いた記事</paper-button></a></center>
+
+<img src="/css/images/profiles/ochazuke.jpg" width="100" height="100" style="border-radius:400px;" >
+<center>お茶漬け : ochazuke
+
+愛知在住の土木専攻の大学生です。
+趣味は旅行、街歩きなど。
+<a href="https://twitter.com/ochazuke_sax" class="none"><paper-button class="article-more-link-button multiple">Twitter</paper-button></a><a href="/authors/ochazuke" class="none"><paper-button class="article-more-link-button multiple">書いた記事</paper-button></a></center>
 
 ## あなたも書いてみませんか
 道路や土木が好きな皆さん。
@@ -33,7 +40,7 @@ URLである「civilluminate」は、普段意識されない土木に光を当�
 ## クレジット
 
 ### [Hexo](https://hexo.io/)
-静的サイトジェネレータ。ブログをフレキシブルにカスタマイズしたい人にはとてもおすすめです。勝手にレスポンシブにしてくれてすごい。構造を把握するのに手間取りましたが管理はめちゃくちゃ楽です。
+静的サイトジェネレータ。ブログをフレキシブルにカスタマイズしたい人にはとてもおすすめです。勝手にレスポンシブにしてくれてすごい。仕組みを把握するのに手間取りましたが管理はめちゃくちゃ楽です。
 
 ### [Polymer](https://www.polymer-project.org/)
 Google製Web Componentsライブラリ。Material Design原理主義者ならやっぱり純正のPaper-button一択ですよね。WordPressとかはてブロではなくHexoにこだわった主な原因です。Hexo超むずかった死にたい。
